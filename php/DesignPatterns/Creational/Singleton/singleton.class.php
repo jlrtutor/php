@@ -26,8 +26,8 @@ class Log{
         return self::$_singletonInstance;
     }
 
-    public function addMessageLog($message) {
-        $this->msgLog[] = !empty($message)?($message):"Empty message";
+    public function addMessageLog(string $message) {
+        $this->msgLog[] = $message??"Empty message";
     }
 
     //override __clone and __wakeup
