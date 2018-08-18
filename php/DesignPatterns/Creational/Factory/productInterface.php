@@ -1,9 +1,7 @@
 <?php
 
-namespace PHP\DesignPatterns\Creational\Factory;
-
-interface productInterface
+interface ProductInterface
 {
-    public function setColor(string $color);
-    public function setBrand(string $brand);
+    public function __construct();
+    public function makeCall(string $number);
 }
