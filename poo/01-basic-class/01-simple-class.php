@@ -16,6 +16,7 @@ class Usuario
 	//Inicializamos el objeto con los datos pasados en la creación del objeto
 	function __construct($nombre, $edad)
 	{
+		echo "Creando objeto de la clase Usuario..." . PHP_EOL;
 		$this->setNombre($nombre);
 		$this->setEdad($edad);
 	}
@@ -37,7 +38,9 @@ class Usuario
 }
 
 
+///////////////////////////////////////////////////////////////////////////////
 // Código principal
+///////////////////////////////////////////////////////////////////////////////
 $usuario = new Usuario("Mario", "43");
 $usuario->mostrarDatos();	//Imprime los datos del usuario por pantalla
 
