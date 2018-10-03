@@ -20,7 +20,7 @@ class Aplicacion
 	// Obligamos a que la funcíón devuelve un STRING o se generará un ERROR
 	public function getDatos() : string 
 	{
-		return "Programa: " . $this->nombre . " v" . $this->version . PHP_EOF;
+		return "Programa: " . $this->nombre . " v" . $this->version . "\n";
 	}
 
 	// Forzamos que la variable nombre sea de tipo String
@@ -45,19 +45,9 @@ class Aplicacion
 
 //Código
 $nombre_programa = "MS Excel";
-$version = 6.0.1;
+$version = 6.1;
 $agno_publicacion = 2015;
 
 $programa = new Aplicacion( $nombre_programa, $version, $agno_publicacion);
 
 echo $programa->getDatos();	//Devuelve string, por eso usamos ECHO
-
-
-//Intentamos crear otro objeto con datos de tipos no válidos
-//por lo que generará error
-$nombre_programa = "MS Word";
-$version = "0.1 Beta";
-$agno_publicacion = "2018";
-
-//Generará ERROR al no cumplirse los requisitos de tipos de datos
-$programa = new Aplicacion( $nombre_programa, $version, $agno_publicacion);
